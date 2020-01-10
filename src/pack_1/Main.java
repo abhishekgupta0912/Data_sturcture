@@ -20,7 +20,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < 6; i++) {
             int x = sc.nextInt();
-            obj.insert(x);
+            obj.create(x);
         }
         obj.head = obj.insertAtBeginning(obj.head, 10);
         obj.show();
@@ -28,15 +28,16 @@ public class Main {
         obj.show();
         obj.head = obj.insertAt(obj.head, 30, 4);
         obj.show();
-//        obj.head=obj.delFirsr(obj.head);obj.show();
+        obj.head = obj.delFirsr(obj.head);
+        obj.show();
         obj.head = obj.delLast(obj.head);
         obj.show();
-//        obj.head=obj.delAt(obj.head,4);
-//        obj.show();
+        obj.head = obj.delAt(obj.head, 4);
+        obj.show();
 
     }
 
-    public void insert(int x) {
+    public void create(int x) {
         Node n = new Node(x);
         if (head == null) {
             head = n;
