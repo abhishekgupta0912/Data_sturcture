@@ -34,6 +34,9 @@ public class Main {
         obj.show();
         obj.head = obj.delAt(obj.head, 4);
         obj.show();
+        obj.head = obj.reverseLink(obj.head);
+        obj.show();
+        ;
 
     }
 
@@ -107,6 +110,19 @@ public class Main {
         pre.next = temp.next;
         temp.next = null;
         return head;
+    }
+
+    public Node reverseLink(Node head) {
+        Node curr = head;
+        Node previous = null;
+        Node next = null;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = previous;
+            previous = curr;
+            curr = next;
+        }
+        return previous;
     }
 
     public void show() {
