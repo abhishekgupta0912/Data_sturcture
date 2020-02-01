@@ -1,4 +1,4 @@
-package pack_1;
+package linklist;
 
 class Link {
     int x;
@@ -66,3 +66,4 @@ public class Main2 {
         return head;
     }
 }
+//

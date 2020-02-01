@@ -1,4 +1,4 @@
-package pack_1;
+package linklist;
 
 import java.util.Scanner;
 
@@ -90,12 +90,12 @@ public class Main {
 
     public Node delLast(Node head) {
         Node last = head;
-        Node preLast = null;
-        while (last.next != null) {
-            preLast = last;
+        Node preLast = head.next;
+        while (preLast.next != null) {
+            preLast = preLast.next;
             last = last.next;
         }
-        preLast.next = null;
+        last.next = null;
         return head;
     }
 
