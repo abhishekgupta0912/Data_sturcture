@@ -42,8 +42,7 @@ public class LinkListImplementation {
 
         // If queue is empty, then new node is front and rear both
         if (rear == null) {
-            front = this.rear = temp;
-            return;
+            front = rear = temp;
         }
 
         // Add the new node at the end of queue and change rear
